@@ -64,7 +64,7 @@ public class Regression {
             this.lr.buildClassifier(instances);
             
             this.ev = new Evaluation(this.instances);
-            this.ev.crossValidateModel(lr, instances, this.NUM_FOLDS, new Random(this.NUM_FOLDS), new String[]{});   
+            this.ev.crossValidateModel(lr, instances, this.NUM_FOLDS, new Random(this.NUM_FOLDS), (Object[]) new String[]{});   
             this.built = true;
              
         }catch(Exception e){
